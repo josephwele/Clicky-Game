@@ -6,6 +6,10 @@ import Footer from './components/Footer'
 import Content from './components/Content'
 
 function App() {
+    function handleClick(e) {
+        e.preventDefault();
+        console.log('The image was clicked.');
+    }
     return ( < >
         <
         NavBar / >
