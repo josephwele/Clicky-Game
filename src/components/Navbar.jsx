@@ -12,7 +12,7 @@ const aStyle ={
   fontSize:30
 }
     return (
-        <nav className="navbar  navbar-light py-3" style={navStyle}>
+        <nav className="navbar fixed-top navbar-light py-3" style={navStyle}>
   <a className="navbar-brand pl-5 font-weight-bolder" style={aStyle} href="#">Clicky Game</a>
   <a className="nav-link" style={aStyle} href="#">Click an image to start!</a>      
   <div id="navbarText">
