@@ -6,21 +6,20 @@ export default class Content extends Component {
   };
    handleClick =(e)=>
    {
-    const str = e.target.className
-    {str.includes('foo')?this.handleScore(e):this.setZero(e)}
-    e.target.className += "foo"
-
-          
-    };
+    e.target.className.includes('foo')?this.setZero(e):this.handleScore(e)
+  }
     handleScore =(e)=>{
+      e.target.className += "foo"
       const Score = this.state.score + 1
       this.setState({score:Score});
       console.log(this.state.score)
+      this.props.handleChange(Score)
     };
     setZero =(e)=>{
       const Zero = 0
       this.setState({score:Zero})
       console.log(this.state.score)
+      this.props.handleChange(Zero)
     }
       
   
