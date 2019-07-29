@@ -2,12 +2,29 @@ import React, { Component } from 'react'
 
 export default class Content extends Component {
   state ={
-    count:0
+    score:0
   };
    handleClick =(e)=>
    {
-    console.log(e.target.id);
-  }
+    const str = e.target.className
+    {str.includes('foo')?this.handleScore(e):this.setZero(e)}
+    e.target.className += "foo"
+
+          
+    };
+    handleScore =(e)=>{
+      const Score = this.state.score + 1
+      this.setState({score:Score});
+      console.log(this.state.score)
+    };
+    setZero =(e)=>{
+      const Zero = 0
+      this.setState({score:Zero})
+      console.log(this.state.score)
+    }
+      
+  
+  
     render() {
         return (
             <div>

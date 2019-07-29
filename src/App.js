@@ -4,23 +4,28 @@ import NavBar from './components/Navbar'
 import Jumbotran from './components/Jumbotron'
 import Footer from './components/Footer'
 import Content from './components/Content'
+import { ReactDOM } from 'react-dom';
 
-function App() {
-    function handleClick(e) {
-        e.preventDefault();
-        console.log('The image was clicked.');
+class App extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            score: 0
+        }
     }
-    return ( < >
-        <
-        NavBar / >
-        <
-        Jumbotran / >
-        <
-        Content / >
-        <
-        Footer / >
-        <
-        />)
+    render() {
+        return ( < div >
+            <
+            NavBar / >
+            <
+            Jumbotran / >
+            <
+            Content / >
+            <
+            Footer / >
+            <
+            div / > )
     }
+}
 
-    export default App
+export default App
